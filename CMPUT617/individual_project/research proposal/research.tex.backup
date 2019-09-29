@@ -1,0 +1,199 @@
+\documentclass[UTF8]{article}
+\usepackage{cite}
+\usepackage[unicode,pdftex]{hyperref}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\geometry{left=2.5cm, right=2.5cm, top=1.4cm, bottom=2.4cm}
+
+
+\title{Intelligent Motion Segmentation}
+\author{Chenqiu Zhao(zhaochenqiu@gmail.com)}
+\date{}
+
+
+\newcommand{\reffig}[1]{Fig. \ref{#1}}
+\newcommand{\refsec}[1]{Section \ref{#1}}
+% \newcommand{\refeq}[1]{Eq. \ref{#1}}
+\newcommand{\reftab}[1]{Table \ref{#1}}
+
+
+\fancyhead{}
+\lhead{\scriptsize Chenqiu Zhao}
+\rhead{\scriptsize research Proposal}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+%\vspace{-120pt}
+\maketitle
+%\vspace{-90pt}
+
+\section*{Potential Research Topics}
+%Moving Objects Segmentation in Freely Moving Camera.
+The topics of this proposal include but are not limited to:
+\begin{itemize}
+    \item Background Subtraction in Complex Environment under Stationary Camera.
+    \item Background Subtraction under Freely Moving camera.
+    \item Motion Segmentation in Complexly Natural Scenes.
+    \item Camera Motion Estimation in Complex Scenes.
+\end{itemize}
+
+\section*{Topic Introduction:}
+Motion is a powerful cue for image and scene segmentation in human visual system \cite{1998_Torr}.
+%
+The motion cue has wide range of applications such as such as video monitoring, optical motion capturing and multimedia applications.
+%
+The human ability to detect, segment, analyze and understand motion is nearly instantaneous,
+and work well in diversely complex scenes,
+such as the presence of multiple objects,
+complex background geometry,
+observer motion and even camouflage.
+%
+While there has been much recent progress related to motion,
+it still appears we are far from human capabilities.
+%
+This study is focus on how to detect, segment the motion or the moving objects in the videos captured from natural scenes.
+%
+The final target of this study is trying to achieve the level of human capabilities for detecting, segmenting or even understanding the motion.
+
+\section*{Project Significance and Background}
+% With the continuous growth of videos obtained from natural scenes in recent years,
+Today, plenty of work focus on understanding the content of videos \cite{2017_VIDEO}.
+%
+In particular,
+Motion is a fundamental cue for human to segment, analysis and understand objects in videos \cite{2016_ECCV}.
+%
+Usually,
+the first step of applications related to motion is motion detection, moving objects segmentation or background subtraction.
+%
+Currently, previous work already achieve well performances in the scenes with ow complexity \cite{2017_TPAMI_GANGWANG}.
+%
+However,
+due to the complexity and the diversity of natural scenes,
+an accurate background subtraction solution is so hard to proposed in the complexly natural environments, 
+even with the assumption of stationary camera \cite{2017_MOTION_REVIEW}.
+%
+In addition,
+With the continuous growth of videos obtained through moving camera in recent years,
+more and more applications require the background subtraction algorithms are effect in the freely moving camera \cite{2017_WU}.
+%
+The problem becomes further challenging once without the assumption of stationary camera.
+%
+For example, as shown in the \reffig{fig_intro}.
+The environments around the horse in different images are completely different due to the camera motion,
+and it is very challenging to segment the moving horse accurately.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figure/exp1.pdf}
+    \caption{Segmenting moving objects in freely moving camera.}
+    \label{fig_intro}
+\end{figure}
+The image sequences shown in \reffig{fig_intro} are captured from the FBMS dataset \cite{2014_TPAMI_FBMS},
+which is the largest dataset to the best of our knowledge.
+%
+Until today, there is still lack of approach which achieves over 80\% accuracy in the FBMS dataset.
+%
+Therefore,
+more efforts are need in the motion detection, segmentation in complexly natural scenes obtained through freely moving camera.
+
+\section*{The Expected Outcome in the Future 3$\sim$4 Years}
+This research can be divided into three part.
+\begin{itemize}
+    \item Moving objects segmentation in stationary camera.
+    \item Accurate camera motion estimation.
+    \item Moving objects Segmentation in freely moving camera.
+\end{itemize}
+
+In the first year,
+we may focus on how to detect moving objects in the stationary camera,
+which is a traditional problem of computer vision.
+%
+Even with 20 decades development,
+it remains a challenging problem in the complex natural scenes,
+and the publications will main related to the background subtraction in complexly natural scenes.
+%
+In the next years,
+we will focus on the estimation of camera motion.
+%
+Since the camera motion is the main challenge to segmenting objects in freely camera,
+it is important to handle the motion of camera.
+%
+Although,
+several exist work are proposed to estimate the camera motion,
+the accuracy is not enough to produce accurate segmentation results.
+%
+In the step,
+the work may related to multi-view geometry, spatio-temporal features or motion segmentation.
+%
+Finally,
+in the rest of time,
+we will focus on how to eliminate the boundary between the background subtraction in stationary camera and freely moving camera.
+%
+We may focus on extending the previous algorithms, or proposing new algorithm to segment moving objects accurately in freely camera.
+
+\section*{How the Project Aligned with the Projects in Computer Vision in ANU}
+There are two main challenges to segment the motion in complexly natural scenes obtained through freely moving camera.
+%
+The first one is the complexity and the diversity of natural scenes,
+which already attracts attentions of researcher \cite{2017_MOTION_REVIEW}.
+%
+The second challenges come from the camera motion,
+which is closely related to the projects of computer vision group in ANU.
+%
+In order to handle the camera motion,
+the estimation of camera motion is a direct solution,
+and it is closely related to Shaodi et al's work\ \cite{2013_MVA_Motion} and Hongdong et al's work\ \cite{2010_TPAMI_CAMMOTION,2017_motion_hongdong}.
+%
+In particular,
+the descriptor based estimation is related to Barnes et al's work\ \cite{2018_TIP_3DShape},
+and the geometry related algorithm belong to Hongdong et al's work\ \cite{2010_TPAMI_REG}.
+%
+Beside the estimation of camera motion,
+the spatio-temporal features is another possible solution,
+and optical flow shows advantages in motion segmentation,
+which is exactly hongdong et al's work\ \cite{2016_motionseg_ECCV,2014_motion_ICIP}.
+%
+In addition,
+there is maybe a refine procedure to improve the accuracy of results,
+and the image segmentation is usually be used in this part,
+which is related to hongdong et al's work \cite{2010_SEG}.
+%
+In a word,
+this project is closely related to the projects of computer vision in ANU.
+
+
+\begin{thebibliography}{4}
+
+\bibitem{2017_MOTION_REVIEW}{W. Kim and C. Jung, “Illumination-invariant background subtraction: Comparative review, models, and prospects,” IEEE Access, vol. 5, pp. 8369–8384, 2017.}
+\bibitem{2017_WU}{Y. Wu, X. He, and T. Q. Nguyen, “Moving object detection with a freely moving camera via background motion subtraction,” IEEE Trans. Circuits Syst. Video Technol., vol. 27, no. 2, pp. 236–248, Feb 2017.}
+\bibitem{2017_VIDEO}{Shih, Huang-Chia. "A survey on content-aware video analysis for sports." IEEE Transactions on Circuits and Systems for Video Technology (2017).}
+\bibitem{2017_MY}{Background Subtraction for Freely Moving Camera via Integration of Foreground and Background cues, 2017, to be subbmited. Chenqiu Zhao, Ying Qu, Yongxin Ge, .etc}
+\bibitem{2014_PR_reviews} Thierry Bouwmans. "Traditional and recent approaches in background modeling for foreground detection: An overview" Pattern Recognition. Springer Berlin Heidelberg, 2014: 314-324.
+\bibitem{2017_TPAMI_GANGWANG} M. Chen, X.Wei, Q. Yang, Q. Li, G.Wang, and M. H. Yang, “Spatiotemporal gmm for background subtraction with superpixel hierarchy,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. PP, no. 99, pp. 1–1, 2017.
+\bibitem{1998_Torr}{Torr, P.H.: Geometric motion segmentation and model selection. PhilosophicalA Transactions of the Royal Society of London A: Mathematical, Physical and Engineering Sciences 356(1740) (1998) 1321-1340}
+\bibitem{2016_ECCV}{P. Bideau and E. Learned-Miller, “It’s moving! a probabilistic model for causal motion segmentation in moving camera videos,” in European Conference on Computer Vision, 2016, pp. 433–449.}
+\bibitem{2014_TPAMI_FBMS}{P. Ochs, J. Malik, T. Brox Segmentation of moving objects by long term video analysis, IEEE Transactions on Pattern Analysis and Machine Intelligence, 2014.}
+\bibitem{2017_ICCV_MUL}{Zhu, Yizhe, and Ahmed Elgammal. "A Multilayer-Based Framework for Online Background Subtraction With Freely Moving Cameras." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2017.}
+
+\bibitem{2017_motion_hongdong}{Zhou, Dingfu, Vincent Frémont, Benjamin Quost, Yuchao Dai, and Hongdong Li. "Moving object detection and segmentation in urban environments from a moving platform." Image and Vision Computing 68 (2017): 76-87.}
+\bibitem{2016_motionseg_ECCV}{Ji, Pan, Hongdong Li, Mathieu Salzmann, and Yuchao Dai. "Robust motion segmentation with unknown correspondences." In European conference on computer vision, pp. 204-219. Springer, Cham, 2014.}
+\bibitem{2014_motion_ICIP}{Ji, Pan, Yiran Zhong, Hongdong Li, and Mathieu Salzmann. "Null space clustering with applications to motion segmentation and face clustering." In Image Processing (ICIP), 2014 IEEE International Conference on, pp. 283-287. IEEE, 2014.}
+
+
+\bibitem{2010_TPAMI_CAMMOTION}{Lim, John, Nick Barnes, and Hongdong Li. "Estimating relative camera motion from the antipodal-epipolar constraint." IEEE transactions on pattern analysis and machine intelligence 32, no. 10 (2010): 1907-1914.}
+\bibitem{2010_TPAMI_REG}{Yang, Jiaolong, Hongdong Li, Dylan Campbell, and Yunde Jia. "Go-ICP: a globally optimal solution to 3D ICP point-set registration." IEEE transactions on pattern analysis and machine intelligence 38, no. 11 (2016): 2241-2254.}
+\bibitem{2013_MVA_Motion}{You, Shaodi, Robby T. Tan, Rei Kawakami, and Katsushi Ikeuchi. "Robust and Fast Motion Estimation for Video Completion." In MVA, pp. 181-184. 2013.}
+\bibitem{2018_TIP_3DShape}{Xiao, Pengdong, Nick Barnes, and Tiberio Caetano. "3-D Shape Matching and Non-Rigid Correspondence for Hippocampi Based on Markov Random Fields." IEEE Transactions on Image Processing 27, no. 3 (2018): 1271-1281.}
+\bibitem{2016_CVPR_Salient}{Feng, David, Nick Barnes, Shaodi You, and Chris McCarthy. "Local background enclosure for RGB-D salient object detection." In Computer Vision and Pattern Recognition (CVPR), 2016 IEEE Conference on, pp. 2343-2350. IEEE, 2016.}
+\bibitem{2010_SEG}{Li, Hongdong, and Chunhua Shen. "Interactive color image segmentation with linear programming." Machine Vision and Applications 21.4 (2010): 403-412.}
+
+
+\end{thebibliography}
+\end{document}

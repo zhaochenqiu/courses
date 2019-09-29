@@ -1,0 +1,115 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: research.aux
+The style file: unsrt.bst
+Database file #1: ref.bib.bib
+I was expecting an "="---line 320 of file ref.bib.bib
+ : // 
+ :    address="Cham",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 535 of file ref.bib.bib
+ : // 
+ :    url={http://dx.doi.org/10.1007/978-3-642-15702-8_33},
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 593 of file ref.bib.bib
+ : // 
+ :    url="http://dx.doi.org/10.1007/978-3-642-15555-0_21"
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 605 of file ref.bib.bib
+ : // 
+ :    url={http://dx.doi.org/10.1007/s11042-009-0348-y},
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 689 of file ref.bib.bib
+ : // 
+ :    url = "http://www.sciencedirect.com/science/article/pii/S0031320311004420",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 728 of file ref.bib.bib
+ : // 
+ :    publisher="Springer Berlin Heidelberg",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 754 of file ref.bib.bib
+ : // 
+ :    doi={10.1007/978-3-642-37410-4_25},
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 770 of file ref.bib.bib
+ : // 
+ :    publisher={Springer Berlin Heidelberg},
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 903 of file ref.bib.bib
+ : // 
+ :    url = "http://www.sciencedirect.com/science/article/pii/S1077314214001349",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 963 of file ref.bib.bib
+ : // 
+ :    url={http://dx.doi.org/10.1007/s00138-013-0551-8},
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 998 of file ref.bib.bib
+ : // 
+ :    url = "http://www.sciencedirect.com/science/article/pii/S1574013714000033",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 1019 of file ref.bib.bib
+ : // 
+ :    url = "http://www.sciencedirect.com/science/article/pii/S0165168415002029",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 1114 of file ref.bib.bib
+ : // 
+ :    url = "http://www.sciencedirect.com/science/article/pii/S0031320311004420",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 1214 of file ref.bib.bib
+ : // 
+ :    url = "http://www.sciencedirect.com/science/article/pii/S1574013714000033",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 1234 of file ref.bib.bib
+ : // 
+ :    url = "http://www.sciencedirect.com/science/article/pii/S1077314214000113",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 1909 of file ref.bib.bib
+ : // 
+ :    publisher="Springer Berlin Heidelberg",
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 1927 of file ref.bib.bib
+ : // 
+ :    address="Berlin, Heidelberg",
+I'm skipping whatever remains of this entry
+You've used 1 entry,
+            1791 wiz_defined-function locations,
+            452 strings with 3752 characters,
+and the built_in function-call counts, 333 in all, are:
+= -- 23
+> -- 17
+< -- 1
++ -- 6
+- -- 5
+* -- 23
+:= -- 54
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 17
+empty$ -- 33
+format.name$ -- 5
+if$ -- 77
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 1
+pop$ -- 6
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 10
+stack$ -- 0
+substring$ -- 12
+swap$ -- 7
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 3
+width$ -- 2
+write$ -- 13
+(There were 17 error messages)
