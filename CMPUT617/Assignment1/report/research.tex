@@ -128,7 +128,7 @@ There are 113 images in Microscopy dataset, which is download from the link prov
 In particular,
 50 images are labelled as positive and 63 images are classified as negative.
 %
-Positive images and negative images are split into 3 parts, training(70\%), validation(20\%) and test(10\%) sets respectively,
+Positive images and negative images are randomly split into 3 parts, training(70\%), validation(20\%) and test(10\%) sets respectively,
 to guarantee that the proportion of positive and negative samples keep invariant in these three sets.
 %
 For a particular image,
@@ -253,14 +253,14 @@ Patches captured from images with frist three scales are directly combined to in
 In particular,
 the left-top positions of corresponding patches are keep invariant.
 %
-After combiniation, patches,
+After combiniation, 
 the size of patches becomes $60 \times 60 \times 9$.
 %
 In order to input these patches into the network,
 we simply increase the channel of kernels in the first layer of network to 9,
 the size of kernels in the first layer of network thus becomes $10 \times 10 \times 9$.
 %
-The network is trained with the same parameter with one under single resolution.
+The network is trained by the same parameters with the single resolution experiments.
 %
 The plots of training loss, validation loss, training accuracy and validation accuracy
 are shown as follows:
@@ -296,11 +296,11 @@ are shown as follows:
 \end{table*}
 
 Similar with the evaluation experiment proposed in last section,
-the evaluation of network with multiple resolution input is also repeated for 10 times.
+the evaluation of network with multiple resolutions input is also repeated for 10 times.
 %
-The comparison between the network with single input and multiple input is shown in the above table.
+The comparison between the network with single resolution input and multiple resolutions input is shown in the above table.
 %
-All the source codes and running results are available on 
+All the source codes and running results are available online \url{https://github.com/zhaochenqiu/courses/tree/master/CMPUT617/Assignment1/program}.
 
 \newpage
 
@@ -312,26 +312,54 @@ All the source codes and running results are available on
 In my opinion,
 the generation of training data is the main challenge of applying deep learning to microscopy over the traditional method.
 %
-First 
-since the resolution of microscopy image is too large to be input into convolutional neural directly,
-patches captured from images are utilized as a compromise to be feed into the network for training.
+Since the resolution of microscopy image is too large to be input into convolutional neural directly,
+patches captured from images are utilized as a compromise to be fed into the network for training.
 %
-Moreover, the size of patches has signification influence to the performance of network,
+Moreover, the size of patches has significant influence on the performance of network,
 since there may be no completed cell in a patch when the size is small,
-while the patches with large size will cost lot of memory.
+while the patches with large size will cost a lot of memory.
 Hence, 
 because the labels of patches are decided according to the name of microscopy image,
-it is possible that some patches without any cells are labelled as positive like patches shown in the left figure.
+it is possible that some patches without any cells are labeled as positive like patches shown in the left figure.
 %
-There patches play role of distraction during training network.
+These patches play the role of distraction during training network.
 %
-In contrast, since the method proposed in the paper \cite{bigras2018new} is a demnesionless methods,
-with the utilization coefficient of variation, which is a demensionless feature.
+In contrast, since the method proposed in the paper \cite{bigras2018new} is a dimensionless method,
+with the utilization coefficient of variation, which is a dimensionless feature.
 %
-The cells are detected by local maxmium algorithms, 
+The cells are detected by local maximum algorithms, 
 and there is no need to consider the generation of training data.
 
-Besides training patches,
+Of course, there are also advantages for applying deep learning to microscopy images classification.
+%
+As shown in the table above, 
+the performance of deep learning is one of the biggest advantages.
+%
+Unlike previous traditional methods,
+the hierarchy architecture of deep learning network makes the model has the ability to learn 
+high-level features which is better than these manual features.
+%
+Moreover,
+the deep learning network can automatically learn the features which are suitable for the applications,
+such as microscopy image classification.
+%
+From this perceptive,
+the generality of a deep learning network is better than the traditional method.
+
+Finally,
+I'd like to discuss another disadvantage of applying deep learning network to microscopy image classification.
+%
+As we can see,
+there is not very high similarity  between the visual patterns in different microscopy images,
+since it seems that the size and the positions of cells include randomness.
+%
+    In this condition,
+it is possible that the patterns in the test set may never appear in training set,
+and the performance of deep learning network is not promising.
+%
+Personally,
+I think it is the main reason that the performance of the proposed network varies during repeating experiments.
+
 
 % In addition,
 % it is possible that some patches didn't include any cell but still labelled as positive,
